@@ -264,6 +264,7 @@ export default {
       this.$http.post(url, { data: order })
         .then((res) => {
           console.log(res)
+          this.$router.push(`/user/checkout/${res.data.orderId}`)
         })
     },
     isPhone (value) {
